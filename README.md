@@ -15,14 +15,14 @@ all the other files for the book in order for the building of the book to work.
 3. The book should open automatically once built. 
 
 
-## Key Files 
+## Key Input Files 
 
 <code> index.Rmd </code>: There must be a file by this name containing the Markdown header "---". Document class is set to "svmono"
 the Springer monograph Latex template. Below the header "---" is a code chunk called "postlatex", this chunk is required in order 
 for the svmono class to work (it is an ugly programming hack). 
 
 <code> _bookdown.yml </code>: the final line of this file starting "rmd_files" is where you specify the Rmd files for each 
-chapter in the order you want them to appear in the book 
+chapter in the order you want them to appear in the book. The book's file name is set here too. 
 
 <code> _output.yml </code>: specify parameters for each output type. In particular for "gitbook", you can set what is printed 
 before and after the table of contents. You can also specify your CSS style file. 
@@ -37,5 +37,9 @@ as this includes all the packages required by the Springer template.
 
 <code> book.bib </code> and <code> packages.bib </code>: include here your references for the book (to papers etc...) and a 
 separate file is used to R packages (not sure why). 
+
+## Key Output Files 
+
+Once the book is built, the output is saved in the directory <code> _book </code>. Generated figures are saved in <code> _bookdown_files </code>. 
 
 
